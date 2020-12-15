@@ -1,0 +1,12 @@
+{
+  "name": "payments",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@mollie/api-client": "^3.4.0",
+    "aws-sdk": "^2.804.0"
+  },
+  "scripts": {
+    "build": "npm install"
+  }
+}

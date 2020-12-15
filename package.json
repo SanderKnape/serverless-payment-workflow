@@ -1,0 +1,31 @@
+{
+  "name": "cdk",
+  "version": "1.0.0",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "scripts": {
+    "build": "tsc && npm run build-lambda",
+    "build-lambda": "cd src/functions && npm run build",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "aws-cdk": "1.78.0",
+    "@types/node": "10.17.27",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2": "^1.78.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.78.0",
+    "@aws-cdk/aws-certificatemanager": "^1.78.0",
+    "@aws-cdk/aws-dynamodb": "1.78.0",
+    "@aws-cdk/aws-lambda": "^1.78.0",
+    "@aws-cdk/aws-route53": "^1.78.0",
+    "@aws-cdk/aws-route53-targets": "^1.78.0",
+    "@aws-cdk/aws-s3": "1.78.0",
+    "@aws-cdk/aws-s3-deployment": "^1.78.0",
+    "@aws-cdk/core": "1.78.0"
+  }
+}

@@ -1,0 +1,19 @@
+<script>
+const domain = '[api_domain]';
+
+async function ready() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id');
+
+    const response = await fetch(`https://${domain}/${id}`);
+    const payment = await response.json();
+    const status = payment.Item.paymentStatus.S;
+
+    document.getElementById('result').innerHTML = status;
+}
+
+document.addEventListener('DOMContentLoaded', ready);
+</script>
+
+Payment result was: <strong id='result'>...</strong>! <a href='/'>Buy more</a>
