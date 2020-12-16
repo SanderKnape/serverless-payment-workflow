@@ -9,6 +9,12 @@ import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 import { Code, Function, Runtime } from '@aws-cdk/aws-lambda';
 import { App, CfnOutput, Stack, StackProps } from '@aws-cdk/core';
 
+/* 
+ * Important: this API key will be visible to anyone with access to your code or with access
+ * to your AWS environment. It's recommended to use a tool such as AWS Secrets Manager to
+ * securely store and access this key. More information can be found here:
+ * https://aws.amazon.com/blogs/security/how-to-securely-provide-database-credentials-to-lambda-functions-by-using-aws-secrets-manager/
+ */ 
 const mollieApiKey = '[mollie_api_key]';
 
 const domain = '[domain]';
